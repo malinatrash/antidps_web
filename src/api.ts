@@ -7,7 +7,7 @@ export default interface MarkerType {
 const PROXY_PATH = '/api/proxy';
 
 export const getMarkers = async (): Promise<MarkerType[]> => {
-	const response = await fetch(`${PROXY_PATH}?path=markers`);
+	const response = await fetch(`${PROXY_PATH}?path=markers/`);
 	if (!response.ok) {
 		throw new Error('Failed to fetch markers');
 	}
@@ -15,7 +15,7 @@ export const getMarkers = async (): Promise<MarkerType[]> => {
 };
 
 export const addMarker = async (marker: MarkerType): Promise<void> => {
-	const response = await fetch(`${PROXY_PATH}?path=markers`, {
+	const response = await fetch(`${PROXY_PATH}?path=markers/`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',

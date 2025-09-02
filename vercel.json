@@ -11,13 +11,17 @@
   ],
   "routes": [
     {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
   ],
   "env": {
-    "VITE_API_URL": "@vite_api_url",
-    "VITE_TELEGRAM_BOT_NAME": "@vite_telegram_bot_name",
-    "VITE_APP_URL": "@vite_app_url"
+    "VITE_API_URL": "https://your-backend-api.com",
+    "VITE_TELEGRAM_BOT_NAME": "antidps_bot",
+    "VITE_APP_URL": "https://antidps-web.vercel.app"
   }
 }

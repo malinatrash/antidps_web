@@ -4,7 +4,7 @@ export default interface MarkerType {
 	address?: string
 }
 
-const API_URL = 'http://81.200.155.237:8000';
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const getMarkers = async (): Promise<MarkerType[]> => {
 	const response = await fetch(`${API_URL}/markers/`);

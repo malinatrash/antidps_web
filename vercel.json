@@ -20,7 +20,7 @@
     }
   ],
   "env": {
-    "VITE_API_URL": "https://your-backend-api.com",
+    "VITE_API_URL": "https://81.200.155.237:8000",
     "VITE_TELEGRAM_BOT_NAME": "antidps_bot",
     "VITE_APP_URL": "https://antidps-web.vercel.app"
   }

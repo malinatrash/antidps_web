@@ -7,7 +7,7 @@ export default interface MarkerType {
 const API_URL = import.meta.env.VITE_API_URL || 'http://81.200.155.237:8000'
 
 export const getMarkers = async (): Promise<MarkerType[]> => {
-	const response = await fetch(`${API_URL}/markers/`)
+	const response = await fetch(`${API_URL}/markers`)
 	if (!response.ok) {
 		throw new Error('Failed to fetch markers')
 	}
@@ -15,7 +15,7 @@ export const getMarkers = async (): Promise<MarkerType[]> => {
 }
 
 export const addMarker = async (marker: MarkerType): Promise<void> => {
-	const response = await fetch(`${API_URL}/markers/`, {
+	const response = await fetch(`${API_URL}/markers`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',

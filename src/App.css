@@ -1,0 +1,24 @@
+.map-column {
+  height: 100vh;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+.marker-list {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 767px) {
+  .map-column {
+    height: 60vh;
+  }
+
+  .marker-list {
+    max-height: 25vh;
+  }
+}
+

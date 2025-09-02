@@ -1,0 +1,49 @@
+/* DpsStyles.css */
+
+@keyframes siren-glow {
+	0% {
+		box-shadow: 0 0 10px 5px #ff0000, inset 0 0 10px 5px #ff0000;
+	}
+	50% {
+		box-shadow: 0 0 10px 5px #0000ff, inset 0 0 10px 5px #0000ff;
+	}
+	100% {
+		box-shadow: 0 0 10px 5px #ff0000, inset 0 0 10px 5px #ff0000;
+	}
+}
+
+.dps-container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.dps-container::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000; /* Ensure it's on top */
+	pointer-events: none; /* Allow clicks to pass through */
+	animation: siren-glow 1s infinite linear;
+	border-radius: 10px; /* Optional: adds rounded corners to the glow */
+}
+
+.marker-address {
+	color: #7e0000 !important;
+	border: 1px solid #00503f;
+	box-shadow: 0 0 8px #000000;
+	border-radius: 5px;
+	font-weight: 600;
+	padding: 5px 10px;
+	transition: all 0.3s ease;
+}
+
+.marker-address:hover {
+	border-color: #ff4d4d;
+	box-shadow: 0 0 15px #ff4d4d;
+	text-shadow: 0 0 5px #ff4d4d;
+}
